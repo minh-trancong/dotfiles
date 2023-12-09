@@ -1,1 +1,1 @@
-/Users/minh/Minh-Codespace/Moreh/linux/tmp/missing/dotfiles/zshrc
+export PS1='%F{red}%n@%m %1~ $ %f'
