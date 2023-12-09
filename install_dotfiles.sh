@@ -1,15 +1,15 @@
 #!/bin/bash
 
-# Định nghĩa đường dẫn tới thư mục dotfiles
-dotfiles_dir=~/dotfiles
+# Define the path to the dotfiles directory
+dotfiles_dir=$(pwd)
 
-# Danh sách các file dotfile
-dotfiles=("bashrc" "vimrc" "tmux.conf")
+# List of dotfiles
+dotfiles=("bashrc" "vimrc" "tmux.conf" "zshrc")
 
-# Vòng lặp qua từng dotfile
+# Loop through each dotfile
 for file in "${dotfiles[@]}"; do
-    # Tạo liên kết tượng trưng từ dotfile trong thư mục home của người dùng tới dotfile tương ứng trong thư mục dotfiles
+    # Create a symbolic link from the dotfile in the user's home directory to the corresponding dotfile in the dotfiles directory
     ln -sf "$dotfiles_dir/$file" "$HOME/.$file"
 done
 
-echo "Dotfiles đã được cài đặt thành công."
+echo "Dotfiles have been successfully installed."
